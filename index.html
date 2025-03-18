@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚽ Live Football Streaming HD | Watch Live Sports</title>
+    <meta name="description" content="Watch live football matches in HD quality. Champions League, Premier League, La Liga y más eventos deportivos en vivo.">
+    
+    <style>
+        /* Base styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+            gap: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .sidebar {
+            width: 250px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            border-radius: 15px;
+            height: fit-content;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .stream-container {
+            position: relative;
+            width: 100%;
+            height: 92vh;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0,0,0,0.3);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 15px;
+        }
+
+        .ad-link {
+            display: block;
+            padding: 20px;
+            background: linear-gradient(145deg, #2ecc71, #27ae60);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+            font-size: 18px;
+            font-weight: bold;
+            margin: 15px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .site-title {
+            color: #2ecc71;
+            text-align: center;
+            margin: 0;
+            padding: 10px 0;
+            font-size: 24px;
+        }
+
+        .floating-ad {
+            position: fixed;
+            width: 300px;
+            height: 250px;
+            bottom: 20px;
+            background: #000;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            z-index: 10000;
+            overflow: hidden;
+        }
+
+        .floating-ad.left {
+            left: 20px;
+        }
+
+        .floating-ad.right {
+            right: 20px;
+        }
+
+        .floating-ad iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .access-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .modal-content {
+            background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .ad-counter {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(145deg, #2ecc71, #27ae60);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            z-index: 10000;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1 class="site-title">Live Matches</h1>
+            <a href="https://poplarwindowsmasculine.com/ydu2utiuk2?key=3fd02ec059ac97247c4debda8aefee7c" class="ad-link" target="_blank">Real Madrid vs Arsenal</a>
+            <a href="https://poplarwindowsmasculine.com/ermi1nwd?key=c13ac82d85d77562eef1a3f6abc2bd52" class="ad-link" target="_blank">Barcelona vs PSG</a>
+            <a href="https://poplarwindowsmasculine.com/xd8m0g9fjb?key=da265b8bee09955d08a2ca1becc3f3c2" class="ad-link" target="_blank">Manchester City vs Real Madrid</a>
+        </div>
+
+        <div class="main-content">
+            <div class="stream-container">
+                <iframe src="https://futbollibreonline.com/" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <h1 class="site-title">Upcoming</h1>
+            <a href="https://poplarwindowsmasculine.com/y1akk252r1?key=954150d2022b2b8e795f24dec4131b62" class="ad-link" target="_blank">Bayern vs Arsenal</a>
+            <a href="https://poplarwindowsmasculine.com/p2z78b2t1?key=4c35384ab3e4e745e6bba5e275148ab7" class="ad-link" target="_blank">Atletico vs Dortmund</a>
+            <a href="https://poplarwindowsmasculine.com/msiv2xf9?key=60178bc55c8d4baa4bd596ec44185e4c" class="ad-link" target="_blank">PSG vs Barcelona</a>
+        </div>
+    </div>
+
+    <div class="floating-ad left" id="leftAd">
+        <iframe src="" allow="autoplay"></iframe>
+    </div>
+
+    <div class="floating-ad right" id="rightAd">
+        <iframe src="" allow="autoplay"></iframe>
+    </div>
+
+    <div id="accessModal" class="access-modal">
+        <div class="modal-content">
+            <h2>⚽ ¡Bienvenido al Streaming en Vivo!</h2>
+            <button id="adButton" style="padding: 15px 30px; background: #2ecc71; color: white; border: none; border-radius: 10px; cursor: pointer; margin-top: 20px;">
+                Ver Partido en HD
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let adCount = 0;
+        const adLinks = [
+            'https://poplarwindowsmasculine.com/ydu2utiuk2?key=3fd02ec059ac97247c4debda8aefee7c',
+            'https://poplarwindowsmasculine.com/ermi1nwd?key=c13ac82d85d77562eef1a3f6abc2bd52',
+            'https://poplarwindowsmasculine.com/xd8m0g9fjb?key=da265b8bee09955d08a2ca1becc3f3c2',
+            'https://poplarwindowsmasculine.com/y1akk252r1?key=954150d2022b2b8e795f24dec4131b62',
+            'https://poplarwindowsmasculine.com/p2z78b2t1?key=4c35384ab3e4e745e6bba5e275148ab7',
+            'https://poplarwindowsmasculine.com/msiv2xf9?key=60178bc55c8d4baa4bd596ec44185e4c'
+        ];
+
+        document.getElementById('adButton').addEventListener('click', showNextAd);
+
+        function showNextAd() {
+            const counter = document.createElement('div');
+            counter.className = 'ad-counter';
+            document.body.appendChild(counter);
+
+            const randomAd = adLinks[Math.floor(Math.random() * adLinks.length)];
+            const adWindow = window.open(randomAd, '_blank');
+            
+            let timeLeft = 5;
+            const timer = setInterval(() => {
+                counter.textContent = `Espera ${timeLeft} segundos...`;
+                timeLeft--;
+                
+                if (timeLeft < 0) {
+                    clearInterval(timer);
+                    counter.remove();
+                    if (adWindow) adWindow.close();
+                    enableContent();
+                }
+            }, 1000);
+        }
+
+        function enableContent() {
+            document.getElementById('accessModal').style.display = 'none';
+            const streamContainer = document.querySelector('.stream-container');
+            const iframe = document.querySelector('iframe');
+            
+            streamContainer.style.pointerEvents = 'auto';
+            streamContainer.style.opacity = '1';
+            iframe.style.opacity = '1';
+            iframe.style.pointerEvents = 'auto';
+        }
+
+        // Initialize content as disabled
+        window.addEventListener('DOMContentLoaded', function() {
+            const streamContainer = document.querySelector('.stream-container');
+            const iframe = document.querySelector('iframe');
+            
+            streamContainer.style.pointerEvents = 'none';
+            iframe.style.opacity = '0.5';
+            iframe.style.pointerEvents = 'none';
+        });
+
+        // Function to update floating ads every 10 seconds
+        function updateAds() {
+            const adIframeLeft = document.querySelector('.floating-ad.left iframe');
+            const adIframeRight = document.querySelector('.floating-ad.right iframe');
+            let adIndex = 0;
+
+            setInterval(() => {
+                adIframeLeft.src = adLinks[adIndex % adLinks.length];
+                adIframeRight.src = adLinks[(adIndex + 1) % adLinks.length];
+                adIndex++;
+            }, 10000); // Change ads every 10 seconds
+        }
+
+        // Function to show new browser windows with ads
+        function showBrowserAds() {
+            let adDisplayCount = 0;
+
+            function showAd() {
+                if (adDisplayCount < 2) {
+                    const randomAd = adLinks[Math.floor(Math.random() * adLinks.length)];
+                    window.open(randomAd, '_blank');
+                    adDisplayCount++;
+                    
+                    setTimeout(showAd, 10000); // Show next ad after 10 seconds
+                } else {
+                    adDisplayCount = 0;
+                    setTimeout(showBrowserAds, 20 * 60 * 1000); // Wait for 20 minutes before starting again
+                }
+            }
+
+            showAd();
+        }
+
+        // Start the ad cycle on page load
+        window.addEventListener('load', function() {
+            updateAds();
+            showBrowserAds();
+        });
+    </script>
+</body>
+</html>
